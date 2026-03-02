@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Portfolio - minseokk7</title>
+    <!-- 구글 폰트 적용 (모던한 느낌의 Inter 폰트) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 배경 장식용 블랍(Blob) -->
+    <div class="background-blobs">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+        <div class="blob shape3"></div>
+    </div>
+    
+    <main class="container">
+        <!-- 프로필 정보 영역 -->
+        <header class="profile-header glass-card">
+            <div id="profile-container" class="profile-info">
+                <!-- 자바스크립트로 프로필 렌더링 (로딩 중일 때 스켈레톤 UI 표시) -->
+                <div class="profile-avatar-skeleton skeleton"></div>
+                <div class="profile-text-skeleton">
+                    <div class="skeleton title-skeleton"></div>
+                    <div class="skeleton desc-skeleton"></div>
+                </div>
+            </div>
+            <div id="profile-error" class="error-message" style="display: none;"></div>
+        </header>
+
+        <!-- 리포지토리 목록 영역 -->
+        <section class="repos-section">
+            <div class="section-header">
+                <h2 class="section-title">최근 리포지토리 (Repositories)</h2>
+                <div class="repo-stats">
+                    <span id="repo-count" class="badge">0</span>
+                </div>
+            </div>
+            
+            <div id="repos-container" class="repos-grid">
+                <!-- 자바스크립트로 리포지토리 카드 렌더링 (초기 스켈레톤 UI 4개) -->
+                <div class="repo-card glass-card skeleton-card"></div>
+                <div class="repo-card glass-card skeleton-card"></div>
+                <div class="repo-card glass-card skeleton-card"></div>
+                <div class="repo-card glass-card skeleton-card"></div>
+            </div>
+            <div id="repos-error" class="error-message" style="display: none;"></div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="site-footer glass-card">
+        <p>© 2026 minseokk7. All rights reserved.</p>
+        <p class="footer-subtext">Powered by GitHub API & Cloudflare Pages</p>
+    </footer>
+
+    <!-- 자바스크립트 모듈 로드 -->
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
